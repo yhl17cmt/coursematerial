@@ -41,12 +41,12 @@ chown nobody:nogroup /data
 ```
 Add mount to fstab.  (make sure the whitespaces are aligned)
 ```
-/dev/sdb1          /data         defaults           0  0
+/dev/sdb1          /data     xfs    defaults           0  0
 ```
 
 ## Edit exports (according to your needs.)
 ```
-/data       192.168.100.0/24(rw,sync,no_subtree,check)
+/data       192.168.100.0/24(rw,sync,no_subtree_check)
 ```
 This will share the /data volume on all nodes in the subnet.
 
